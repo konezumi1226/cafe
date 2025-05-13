@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>学食の混雑状況</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    h1 { font-size: 2em; }
+    #count { font-size: 3em; margin: 20px 0; }
+    button { font-size: 1.5em; padding: 10px 20px; margin: 10px; }
+  </style>
+</head>
+<body>
+  <h1>学食の現在の人数</h1>
+  <div id="count">0人</div>
+  <button onclick="changeCount(1)">+1人 入った</button>
+  <button onclick="changeCount(-1)">-1人 出た</button>
+
+  <script>
+    let count = 0;
+
+    function changeCount(delta) {
+      count += delta;
+      document.getElementById("count").innerText = `${count}人`;
+    }
+  </script>
+</body>
+</html>
